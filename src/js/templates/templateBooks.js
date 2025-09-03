@@ -6,7 +6,7 @@ export function templateSection({ list_name, books }) {
 
   return `
     <li>
-      <h3 class="section-title test2">${list_name}</h3>
+      <h3 class="section-title">${list_name}</h3>
       <ul class="book-list">
         ${booksMarkup}
       </ul>

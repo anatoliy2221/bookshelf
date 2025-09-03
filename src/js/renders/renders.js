@@ -10,7 +10,6 @@ export function renderCategories(data) {
 
 export function renderTopBooks(books) {
   const markup = templateBooks(books);
-  console.log(refs.bookListElem);
 
   return refs.bookListElem.innerHTML = markup;
 }
