@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanilla App Template</title>
+  <script type="module" crossorigin src="/anatoliy2221/bookshelf/index.js"></script>
+  <link rel="modulepreload" crossorigin href="/anatoliy2221/bookshelf/assets/vendor-BkCUij8E.js">
+  <link rel="stylesheet" crossorigin href="/anatoliy2221/bookshelf/assets/styles-DgrepKx-.css">
+</head>
+
+<body>
+  <header class="header container">
+  <nav class="header-navigation">
+    <a href="/index.html" class="header-logo">
+      <svg class="header-icon">
+        <use href="../img/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <ul class="header-navigation-list">
+      <li class="header-navigation-item navigation_link_home">
+        <a href="/index.html" class="navigation_link_home">Home</a>
+      </li>
+      <li class="header-navigation-item">
+        <a href="../shopping.html" class="shopping-link">shopping list</a>
+        <svg class="shopping-icon">
+          <use href="../img/sprite.svg#basket"></use>
+        </svg>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="theme-switch">
+    <label for="toggler" class="switch">
+      <input id="toggler" type="checkbox" class="switch_input" aria-label="Toggle menu" />
+      <span class="switch_slider"></span>
+    </label>
+  </div>
+  <button>Sign up</button>
+</header>
+  <main id="app" class="home">
+    <aside id="categories">
+  <ul class="categories-list">
+    <li class="category-item">
+      <a href="/" id="all-categories" class="active">All categories</a>
+    </li>
+  </ul>
+</aside>
+    <section id="books" class="top-books-block">
+  <h1>Best Sellers Books</h1>
+  <ul class="top-books-list"></ul>
+</section>
+  </main>
+
+</body>
+
+</html>
