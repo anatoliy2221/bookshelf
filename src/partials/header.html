@@ -1,19 +1,28 @@
-<header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
+<header class="header container">
+  <nav class="header-navigation">
+    <a href="/index.html" class="header-logo">
+      <svg class="header-icon">
+        <use href="../img/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <ul class="header-navigation-list">
+      <li class="header-navigation-item navigation_link_home">
+        <a href="/index.html" class="navigation_link_home">Home</a>
+      </li>
+      <li class="header-navigation-item">
+        <a href="../shopping.html" class="shopping-link">shopping list</a>
+        <svg class="shopping-icon">
+          <use href="../img/sprite.svg#basket"></use>
         </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="theme-switch">
+    <label for="toggler" class="switch">
+      <input id="toggler" type="checkbox" class="switch_input" aria-label="Toggle menu" />
+      <span class="switch_slider"></span>
+    </label>
   </div>
+  <button>Sign up</button>
 </header>
