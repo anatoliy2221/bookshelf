@@ -6,7 +6,7 @@
   </li>
   `}function p({list_name:e,books:t}){const n=t.slice(0,5).map(u).join("");return`
     <li>
-      <h3 class="section-title test2">${e}</h3>
+      <h3 class="section-title">${e}</h3>
       <ul class="book-list">
         ${n}
       </ul>
@@ -19,5 +19,5 @@
     <h3 class='test'>${t}</h3>
     <ul class='category-list'>
       ${o}
-    </ul>`}function B(e){const t=k(e);return c.categoryElem.insertAdjacentHTML("beforeend",t)}function b(e){const t=y(e);return console.log(c.bookListElem),c.bookListElem.innerHTML=t}function E(e){const t=h(e);return console.log(c.topBooksElem),c.topBooksElem.innerHTML=t}const i={renderCategories:B,renderTopBooks:b,renderSelectedCategory:E},a=new d;async function C(){const e=await a.getCategoryList(),t=await a.getTopBooks();i.renderCategories(e),i.renderTopBooks(t)}C();c.categoryElem.addEventListener("click",L);async function L(e){const t=e.target.textContent;if(e.currentTarget!==e.target)if(g(t),t==="All categories"){const o=await a.getTopBooks();i.renderTopBooks(o)}else{const o=await a.getBooksByCategory(t);i.renderSelectedCategory(o)}}function g(e){document.querySelectorAll(".category-item a").forEach(o=>o.classList.remove("active")),document.querySelectorAll(".category-item a").forEach(o=>{o.innerText===e&&o.classList.add("active")})}c.bookListElem.addEventListener("click",async e=>{if(e.target.classList.contains("see-more-button")){const t=e.target.closest("li"),o=t.querySelector("h3").textContent;console.log(t.querySelector("h3"));const n=await a.getBooksByCategory(o);g(o),i.renderSelectedCategory(n)}});
+    </ul>`}function B(e){const t=k(e);return c.categoryElem.insertAdjacentHTML("beforeend",t)}function b(e){const t=y(e);return c.bookListElem.innerHTML=t}function E(e){const t=h(e);return console.log(c.topBooksElem),c.topBooksElem.innerHTML=t}const i={renderCategories:B,renderTopBooks:b,renderSelectedCategory:E},a=new d;async function C(){const e=await a.getCategoryList(),t=await a.getTopBooks();i.renderCategories(e),i.renderTopBooks(t)}C();c.categoryElem.addEventListener("click",L);async function L(e){const t=e.target.textContent;if(e.currentTarget!==e.target)if(g(t),t==="All categories"){const o=await a.getTopBooks();i.renderTopBooks(o)}else{const o=await a.getBooksByCategory(t);i.renderSelectedCategory(o)}}function g(e){document.querySelectorAll(".category-item a").forEach(o=>o.classList.remove("active")),document.querySelectorAll(".category-item a").forEach(o=>{o.innerText===e&&o.classList.add("active")})}c.bookListElem.addEventListener("click",async e=>{if(e.target.classList.contains("see-more-button")){const t=e.target.closest("li"),o=t.querySelector("h3").textContent;console.log(t.querySelector("h3"));const n=await a.getBooksByCategory(o);g(o),i.renderSelectedCategory(n)}});
 //# sourceMappingURL=index.js.map
